@@ -34,7 +34,7 @@ server.use("/api/tasks",jwtAuthorizer, taskRouter)
 
 
 server.use((req,res) => {
-    res.status(404).send("API not found");
+    res.status(404).send("This is task management api");
 })
 
 
