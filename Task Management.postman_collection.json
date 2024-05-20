@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "83c06589-ae3c-4066-8b8b-7aea5bcd58c0",
+		"name": "Task Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33506823"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mayank\",\r\n    \"email\": \"mayank@gmail.com\",\r\n    \"password\": \"mayank\",\r\n    \"type\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mayank@gmail.com\",\r\n    \"password\": \"mayank\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"shopping\",\r\n    \"description\": \"shoe, car, villa\",\r\n    \"status\": \"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/tasks/create",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tasks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"shopping\",\r\n    \"description\": \"shoe, cars, villas\",\r\n    \"status\": \"pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/tasks/update/6648871e2fc5c42d734b95d8",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tasks",
+						"update",
+						"6648871e2fc5c42d734b95d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/tasks/delete/66488fa88d464afb71433ecd",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tasks",
+						"delete",
+						"66488fa88d464afb71433ecd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/tasks/filter",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tasks",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "completed",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "singing",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "complete task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/api/tasks/complete/66488f68586de314040e1e13",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"tasks",
+						"complete",
+						"66488f68586de314040e1e13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
