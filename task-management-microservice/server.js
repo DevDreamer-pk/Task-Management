@@ -29,6 +29,9 @@ server.use(bodyParser.json());
 // server.use("/api/products", jwtAuthorizer,productRouter) 
 server.use("/api/users", userRouter)
 server.use("/api/tasks",jwtAuthorizer, taskRouter)
+server.get("/ping", (req, res) => {
+    res.send("PONG");
+})
 // server.use("/api/cart", loggerMiddleware,jwtAuthorizer, cartRouter)
 // server.use("/api/orders", jwtAuthorizer, orderRouter)
 
