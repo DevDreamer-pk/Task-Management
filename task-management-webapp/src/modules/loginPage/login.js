@@ -19,9 +19,9 @@ const LoginPage = () => {
         const token = response.token;
         localStorage.setItem("authToken", token);
         const decodedToken = jwtDecode(token);
-        const { userId, email, name } = decodedToken;
+        const { userID, email, name } = decodedToken;
         toast.success("User signed in successfully");
-        navigate("/deshboard", { state: { userId, email, name } });
+        navigate("/deshboard", { state: { userID, email, name } });
       }
       // setLoading(false);
       return response;

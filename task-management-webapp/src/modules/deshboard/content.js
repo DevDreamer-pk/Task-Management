@@ -9,7 +9,8 @@ const Dashboard = ({
   handleFilterTask,
 }) => {
   const location = useLocation();
-  const { userId, email, name } = location.state || {};
+  const { userID, email, name } = location.state || {};
+  console.log(userID, email, name);
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState({
     name: "",
@@ -85,7 +86,7 @@ const Dashboard = ({
             </div>
             <div className="flex items-center space-x-4 ml-8">
               <span className="text-gray-700 font-semibold">User ID:</span>
-              <span className="text-gray-600">{userId}</span>
+              <span className="text-gray-600">{userID}</span>
             </div>
             <div className="flex items-center space-x-4 ml-8">
               <a

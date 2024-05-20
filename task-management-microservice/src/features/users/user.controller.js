@@ -22,7 +22,7 @@ export default class UserController {
         }
 
         // create token
-        const token = Jwt.sign({userID : user.userData._id, name: user.userData.name, email: user.userData.email}, process.env.JWT_SECRET, { expiresIn: '10m' });
+        const token = Jwt.sign({userID : user.userData._id, name: user.userData.name, email: user.userData.email}, process.env.JWT_SECRET, { expiresIn: '1h' });
 
         return res.status(200).send({ success: true, message: "User logged in successfully", token });
     }
